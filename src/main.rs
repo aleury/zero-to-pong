@@ -131,7 +131,7 @@ fn collision_detection(
             && ball.translation.y + BALL_WIDTH / 2.0 > paddle.translation.y - PADDLE_HEIGHT / 2.0
         {
             velocity.0 *= -1.0;
-            velocity.0.y = rand::rng().random::<f32>() * 250.0;
+            velocity.0.y = rand::rng().random_range(-1.0..1.0) * 250.0;
         }
     }
 }
